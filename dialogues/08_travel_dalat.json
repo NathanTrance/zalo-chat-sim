@@ -1,0 +1,109 @@
+{
+  "id": "zalo_travel_dalat_08",
+  "clock": "14:20",
+  "status_bar": {
+    "battery": 67,
+    "signal": 4,
+    "wifi": true,
+    "muted": false,
+    "media": "Spotify"
+  },
+  "ui": {
+    "nav": "gesture",
+    "placeholder": "Tin nhắn",
+    "scroll_fab": false
+  },
+  "conversation": {
+    "kind": "group",
+    "title": "Đà Lạt 3 ngày 2 đêm",
+    "me": "vy",
+    "participants": [
+      {
+        "id": "vy",
+        "name": "Vy"
+      },
+      {
+        "id": "mai",
+        "name": "Mai"
+      },
+      {
+        "id": "duc",
+        "name": "Đức"
+      },
+      {
+        "id": "tham",
+        "name": "Thắm"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "text",
+      "from": "mai",
+      "text": "Mọi người ơi, cuối tháng này có ai rảnh không?",
+      "time": "10:40"
+    },
+    {
+      "type": "text",
+      "from": "duc",
+      "text": "Mình rảnh, đi đâu vậy?",
+      "time": "10:45"
+    },
+    {
+      "type": "text",
+      "from": "mai",
+      "text": "Chốt danh sách đi Đà Lạt cuối tháng: Vy, Mai, Đức, Thắm. Ai bận báo trước thứ Tư nhé",
+      "time": "11:02"
+    },
+    {
+      "type": "sticker",
+      "from": "tham",
+      "emoji": "😍",
+      "time": "11:09"
+    },
+    {
+      "type": "text",
+      "from": "vy",
+      "text": "Homestay gần hồ Xuân Hương, 850k/đêm cho 2 phòng, mỗi người 425k",
+      "time": "13:40"
+    },
+    {
+      "type": "link",
+      "from": "vy",
+      "title": "Homestay Mây Lang Thang - gần hồ Xuân Hương",
+      "domain": "booking.com",
+      "url": "https://www.booking.com/hotel/vn/may-lang-thang.html",
+      "time": "13:41"
+    },
+    {
+      "type": "text",
+      "from": "mai",
+      "text": "Chốt luôn đi, mình đặt cọc trước 500k nhé. Ai chuyển khoản thì ghi rõ tên nha",
+      "time": "13:52",
+      "reaction": {
+        "emoji": "❤️",
+        "count": 3
+      }
+    },
+    {
+      "type": "text",
+      "from": "tham",
+      "text": "Mình chuyển rồi, thứ bảy đi đồi chè Cầu Đất nha",
+      "time": "14:15"
+    }
+  ],
+  "scenario": {
+    "topic": "kế hoạch chuyến đi Đà Lạt 3 ngày 2 đêm",
+    "decisions": [
+      "chốt 4 người: Vy, Mai, Đức, Thắm",
+      "ở homestay Mây Lang Thang gần hồ Xuân Hương, 850k/đêm",
+      "Mai đặt cọc trước 500k"
+    ],
+    "action_items": [
+      "mọi người chuyển khoản cọc và ghi rõ tên",
+      "lịch trình thứ bảy: đồi chè Cầu Đất buổi sáng, chợ đêm buổi chiều"
+    ],
+    "summary_en": "A group of four plans a three-day trip to Đà Lạt. Mai confirms the list and asks anyone unavailable to tell her before Wednesday. Vy finds a homestay near Xuân Hương Lake at 850,000 VND per night for two rooms, shares the booking link, and works out the cost per person. Mai agrees to pay a 500,000 VND deposit, and Thắm says she has transferred her share and suggests visiting Cầu Đất tea hill in the morning and the night market in the afternoon.",
+    "summary_vi": "Nhóm bốn người lên kế hoạch đi Đà Lạt 3 ngày 2 đêm. Mai chốt danh sách và nhắc ai bận báo trước thứ Tư. Vy tìm được homestay Mây Lang Thang gần hồ Xuân Hương giá 850k/đêm cho 2 phòng, gửi link và tính chi phí mỗi người. Mai nhận đặt cọc 500k, Thắm đã chuyển tiền và đề xuất lịch trình đồi chè Cầu Đất buổi sáng, chợ đêm buổi chiều."
+  }
+}

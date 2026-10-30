@@ -1,0 +1,103 @@
+{
+  "id": "zalo_clinic_appointment_07",
+  "clock": "8:05",
+  "status_bar": {
+    "battery": 88,
+    "signal": 4,
+    "wifi": true,
+    "muted": false,
+    "media": null
+  },
+  "ui": {
+    "nav": "3button",
+    "placeholder": "Tin nhắn",
+    "scroll_fab": false
+  },
+  "conversation": {
+    "kind": "direct",
+    "title": "Phòng khám An Khang",
+    "me": "huong",
+    "participants": [
+      {
+        "id": "huong",
+        "name": "Hương"
+      },
+      {
+        "id": "clinic",
+        "name": "Phòng khám An Khang"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "text",
+      "from": "clinic",
+      "text": "Chào chị Hương, em gọi xác nhận lịch khám sáng nay ạ",
+      "time": "7:20"
+    },
+    {
+      "type": "text",
+      "from": "huong",
+      "text": "Dạ vâng, em nghe ạ",
+      "time": "7:21"
+    },
+    {
+      "type": "text",
+      "from": "clinic",
+      "text": "Chào chị Hương, phòng khám xác nhận lịch hẹn khám tổng quát lúc 9h00 ngày 16/10/2026 với bác sĩ Trần Quốc Bảo ạ.",
+      "time": "7:42"
+    },
+    {
+      "type": "text",
+      "from": "clinic",
+      "text": "Chị vui lòng tới trước 15 phút, mang theo CCCD và kết quả xét nghiệm cũ nếu có.",
+      "time": "7:42"
+    },
+    {
+      "type": "text",
+      "from": "huong",
+      "text": "Dạ vâng, cho em hỏi khám tổng quát có cần nhịn ăn không ạ?",
+      "time": "7:50"
+    },
+    {
+      "type": "voice",
+      "from": "clinic",
+      "duration": 14,
+      "seed": "clinic14",
+      "time": "7:55"
+    },
+    {
+      "type": "text",
+      "from": "clinic",
+      "text": "Chị nhịn ăn ít nhất 8 tiếng trước khi lấy máu nhé, nước lọc thì vẫn uống bình thường ạ.",
+      "time": "7:56"
+    },
+    {
+      "type": "date",
+      "text": "08:00"
+    },
+    {
+      "type": "text",
+      "from": "huong",
+      "text": "Dạ em cảm ơn, hẹn gặp bác sĩ sáng nay ạ",
+      "time": "8:02",
+      "reaction": {
+        "emoji": "👍",
+        "count": 1
+      }
+    }
+  ],
+  "scenario": {
+    "topic": "xác nhận lịch khám tổng quát",
+    "decisions": [
+      "khám lúc 9h00 ngày 16/10/2026 với bác sĩ Trần Quốc Bảo"
+    ],
+    "action_items": [
+      "Hương tới trước 15 phút",
+      "mang CCCD và kết quả xét nghiệm cũ",
+      "nhịn ăn ít nhất 8 tiếng trước khi lấy máu"
+    ],
+    "summary_en": "A clinic confirms Hương's general check-up at 9:00 on 16/10/2026 with Dr. Trần Quốc Bảo and asks her to arrive 15 minutes early with her ID and previous test results. Hương asks whether she needs to fast, and the clinic replies with a voice message and text saying she should fast for at least eight hours before the blood draw but may drink water.",
+    "summary_vi": "Phòng khám xác nhận lịch khám tổng quát của Hương lúc 9h00 ngày 16/10/2026 với bác sĩ Trần Quốc Bảo, dặn tới trước 15 phút và mang CCCD, kết quả xét nghiệm cũ. Hương hỏi có cần nhịn ăn không, phòng khám trả lời bằng tin nhắn thoại và tin nhắn: nhịn ăn ít nhất 8 tiếng trước khi lấy máu, vẫn được uống nước lọc."
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "id": "zalo_family_dinner_02",
+  "clock": "18:12",
+  "status_bar": {
+    "battery": 76,
+    "signal": 4,
+    "wifi": true,
+    "muted": true,
+    "media": null
+  },
+  "ui": {
+    "nav": "gesture",
+    "placeholder": "Tin nhắn",
+    "scroll_fab": false
+  },
+  "conversation": {
+    "kind": "group",
+    "title": "Gia đình",
+    "me": "linh",
+    "participants": [
+      {
+        "id": "mother",
+        "name": "Mẹ"
+      },
+      {
+        "id": "linh",
+        "name": "Linh"
+      },
+      {
+        "id": "hung",
+        "name": "Hùng"
+      },
+      {
+        "id": "ba",
+        "name": "Ba"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "date",
+      "text": "Hôm nay"
+    },
+    {
+      "type": "text",
+      "from": "hung",
+      "text": "Mẹ ơi tối nay con có học thêm không ạ?",
+      "time": "16:40"
+    },
+    {
+      "type": "text",
+      "from": "mother",
+      "text": "Có con, 8h mới xong nha",
+      "time": "16:42"
+    },
+    {
+      "type": "text",
+      "from": "mother",
+      "text": "Tối nay cả nhà ăn cơm ở nhà nhé, mẹ nấu canh chua cá lóc 🍲",
+      "time": "17:45"
+    },
+    {
+      "type": "text",
+      "from": "linh",
+      "text": "Con đang ở trường, chắc 6h30 về ạ",
+      "time": "17:50",
+      "reaction": {
+        "emoji": "❤️",
+        "count": 2
+      }
+    },
+    {
+      "type": "image",
+      "from": "mother",
+      "asset": "assets/photos/meal.jpg",
+      "caption": "Mẹ mua cá tươi ở chợ sáng nay",
+      "time": "17:52"
+    },
+    {
+      "type": "text",
+      "from": "ba",
+      "text": "Vậy ba đi đón Linh rồi về luôn",
+      "time": "17:58"
+    },
+    {
+      "type": "voice",
+      "from": "hung",
+      "duration": 9,
+      "seed": "hung9",
+      "time": "18:04"
+    }
+  ],
+  "scenario": {
+    "topic": "bữa cơm tối của gia đình",
+    "decisions": [
+      "cả nhà ăn cơm tối ở nhà",
+      "Ba đi đón Linh lúc 6h30"
+    ],
+    "action_items": [
+      "Hùng về khoảng 19h30",
+      "Mẹ nấu canh chua cá lóc"
+    ],
+    "summary_en": "A family group chat arranges dinner. The mother says she is cooking sour fish soup at home tonight and sends a photo of the fish she bought. Hùng will arrive around 7:30 pm, Linh around 6:30 pm, and their father offers to pick Linh up. Hùng also sends a short voice message.",
+    "summary_vi": "Nhóm chat gia đình bàn về bữa cơm tối. Mẹ nấu canh chua cá lóc ở nhà và gửi ảnh cá mua buổi sáng. Hùng về khoảng 19h30, Linh về lúc 18h30 và Ba sẽ đi đón Linh. Hùng cũng gửi thêm một tin nhắn thoại ngắn."
+  }
+}

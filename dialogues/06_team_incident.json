@@ -1,0 +1,110 @@
+{
+  "id": "zalo_team_incident_06",
+  "clock": "22:47",
+  "status_bar": {
+    "battery": 12,
+    "signal": 3,
+    "wifi": true,
+    "muted": false,
+    "media": null
+  },
+  "ui": {
+    "nav": "gesture",
+    "placeholder": "Tin nhắn",
+    "scroll_fab": false
+  },
+  "conversation": {
+    "kind": "group",
+    "title": "Team Alpha - Sự cố",
+    "me": "minh",
+    "participants": [
+      {
+        "id": "minh",
+        "name": "Minh"
+      },
+      {
+        "id": "trung",
+        "name": "Trung"
+      },
+      {
+        "id": "ha",
+        "name": "Hà"
+      },
+      {
+        "id": "long",
+        "name": "Long"
+      },
+      {
+        "id": "oncall",
+        "name": "Oncall"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "text",
+      "from": "oncall",
+      "text": "Mọi người ơi, em mở incident channel rồi nhé",
+      "time": "22:30"
+    },
+    {
+      "type": "text",
+      "from": "long",
+      "text": "Em vào rồi ạ",
+      "time": "22:31"
+    },
+    {
+      "type": "text",
+      "from": "oncall",
+      "text": "🔴 CẢNH BÁO: API /v2/orders trả 502 từ 22:31, ảnh hưởng khoảng 40% request thanh toán.",
+      "time": "22:35"
+    },
+    {
+      "type": "text",
+      "from": "trung",
+      "text": "Log báo OOM, container chỉ được 512Mi trong khi batch đồng bộ giá tăng gấp ba",
+      "time": "22:37"
+    },
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "Mình vừa rollback về bản 2.14.3, error rate còn 2,1% rồi",
+      "time": "22:39",
+      "reaction": {
+        "emoji": "😮",
+        "count": 2
+      }
+    },
+    {
+      "type": "text",
+      "from": "ha",
+      "text": "Bên em vẫn còn 17 đơn kẹt trạng thái pending, cần xử lý tay",
+      "time": "22:42",
+      "quote": {
+        "name": "Minh",
+        "text": "Mình vừa rollback về bản 2.14.3"
+      }
+    },
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "Chốt nhé: Trung tăng memory limit lên 1Gi; Hà xử lý 17 đơn pending; Long viết postmortem trước 11h sáng mai.",
+      "time": "22:45"
+    }
+  ],
+  "scenario": {
+    "topic": "sự cố API /v2/orders trả lỗi 502 do pod bị OOM",
+    "decisions": [
+      "rollback deployment về bản 2.14.3 lúc 22:39",
+      "tăng memory limit lên 1Gi trước khi deploy lại"
+    ],
+    "action_items": [
+      "Trung tăng memory limit và thêm cảnh báo OOM",
+      "Hà xử lý 17 đơn pending",
+      "Long viết postmortem trước 11h sáng hôm sau",
+      "Minh báo cáo khách hàng trong tối nay"
+    ],
+    "summary_en": "The on-call engineer reports that /v2/orders has been returning 502 since 22:31, affecting about 40% of payment requests. Trung finds OOM errors caused by a larger price-sync batch. Minh rolls back to 2.14.3 and the error rate falls to 2.1%, but 17 orders are still stuck in a pending state. Minh assigns follow-ups: raise the memory limit, fix the pending orders manually, and write a postmortem by 11:00.",
+    "summary_vi": "Kỹ sư on-call báo API /v2/orders trả lỗi 502 từ 22:31, ảnh hưởng khoảng 40% request thanh toán. Trung xác định lỗi OOM do batch đồng bộ giá tăng. Minh rollback về bản 2.14.3 và error rate giảm còn 2,1%, nhưng vẫn còn 17 đơn kẹt trạng thái pending. Minh phân công tăng memory limit, xử lý tay các đơn pending và viết postmortem trước 11h."
+  }
+}

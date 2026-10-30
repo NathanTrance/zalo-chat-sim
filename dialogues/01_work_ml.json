@@ -1,0 +1,115 @@
+{
+  "id": "zalo_work_ml_01",
+  "clock": "17:38",
+  "status_bar": {
+    "battery": 43,
+    "signal": 4,
+    "wifi": true,
+    "muted": false,
+    "media": "NST VIET"
+  },
+  "ui": {
+    "nav": "3button",
+    "placeholder": "Tin nhắn",
+    "scroll_fab": true
+  },
+  "conversation": {
+    "kind": "direct",
+    "title": "An",
+    "me": "minh",
+    "participants": [
+      {
+        "id": "minh",
+        "name": "Minh"
+      },
+      {
+        "id": "an",
+        "name": "An"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "em check giúp anh bảng so sánh model tuần trước nhé",
+      "time": "13:12"
+    },
+    {
+      "type": "text",
+      "from": "an",
+      "text": "Dạ em xem rồi, cột accuracy bị lệch do normalize sai ạ",
+      "time": "13:20"
+    },
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "ừ đúng rồi, tại bọn anh đổi preprocessing",
+      "time": "13:31"
+    },
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "đúng là không ai đọc luôn",
+      "time": "13:40"
+    },
+    {
+      "type": "text",
+      "from": "an",
+      "text": "em nên dùng model anh liệt kê ở đây lên test set em tạo hay ăn cắp số luôn anh",
+      "time": "13:43"
+    },
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "bọn anh có sẵn testset cho phần này rồi",
+      "time": "13:58"
+    },
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "cứ lấy thằng chèn số luôn",
+      "time": "13:58"
+    },
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "mắc mớ gì chạy lại",
+      "time": "13:58"
+    },
+    {
+      "type": "date",
+      "text": "15:10 14/10/2026"
+    },
+    {
+      "type": "text",
+      "from": "an",
+      "text": "anh ơi em update lại cái report rồi ạ",
+      "time": "15:10"
+    },
+    {
+      "type": "text",
+      "from": "an",
+      "text": "trong github cũng có cái eval set luôn",
+      "time": "15:10"
+    },
+    {
+      "type": "text",
+      "from": "minh",
+      "text": "oke nhé, để anh xem qua rồi gửi lại feedback",
+      "time": "15:11"
+    }
+  ],
+  "scenario": {
+    "topic": "chọn test set để đánh giá model",
+    "decisions": [
+      "dùng test set có sẵn của nhóm anh Minh và lấy luôn kết quả đã chèn số"
+    ],
+    "action_items": [
+      "An cập nhật lại report",
+      "Minh xem eval set trên GitHub và gửi feedback"
+    ],
+    "summary_en": "Minh and An discuss which test set to use for the model evaluation. Minh says their team already has a test set for this part, so they should use the existing results instead of re-running. Later An reports having updated the report and points to the eval set on GitHub, and Minh agrees to review it and send feedback.",
+    "summary_vi": "Minh và An trao đổi về việc dùng test set nào để đánh giá model. Minh cho biết nhóm anh đã có sẵn test set nên chỉ cần lấy kết quả đã chèn số, không cần chạy lại. Sau đó An báo đã cập nhật report và cho biết eval set có trên GitHub, Minh đồng ý xem lại và gửi feedback."
+  }
+}

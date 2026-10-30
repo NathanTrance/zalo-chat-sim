@@ -1,0 +1,113 @@
+{
+  "id": "zalo_delivery_03",
+  "clock": "9:26",
+  "status_bar": {
+    "battery": 92,
+    "signal": 3,
+    "wifi": false,
+    "muted": false,
+    "media": null
+  },
+  "ui": {
+    "nav": "3button",
+    "placeholder": "Tin nhắn",
+    "scroll_fab": false
+  },
+  "conversation": {
+    "kind": "direct",
+    "title": "Shipper Hùng",
+    "me": "linh",
+    "participants": [
+      {
+        "id": "linh",
+        "name": "Linh"
+      },
+      {
+        "id": "shipper",
+        "name": "Shipper Hùng"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "text",
+      "from": "shipper",
+      "text": "Chào chị, em giao đơn của shop Áo Thun Sài Gòn ạ",
+      "time": "8:35"
+    },
+    {
+      "type": "text",
+      "from": "linh",
+      "text": "Dạ vâng, em giao giúp chị nhé",
+      "time": "8:37"
+    },
+    {
+      "type": "text",
+      "from": "shipper",
+      "text": "Đơn gồm 2 áo thun size M, tổng 350k ạ",
+      "time": "8:38"
+    },
+    {
+      "type": "text",
+      "from": "shipper",
+      "text": "Chào chị, em giao đơn hàng 2 áo thun size M. Chị cho em xin địa chỉ với ạ",
+      "time": "8:41"
+    },
+    {
+      "type": "text",
+      "from": "linh",
+      "text": "128/7 Nguyễn Trãi, phường Bến Thành, Quận 1 nha em",
+      "time": "8:43"
+    },
+    {
+      "type": "text",
+      "from": "linh",
+      "text": "Gọi số 0903 774 215 trước khi tới giúp chị",
+      "time": "8:43"
+    },
+    {
+      "type": "text",
+      "from": "shipper",
+      "text": "Dạ em cảm ơn, khoảng 30 phút nữa em tới ạ",
+      "time": "8:45"
+    },
+    {
+      "type": "date",
+      "text": "09:18"
+    },
+    {
+      "type": "text",
+      "from": "shipper",
+      "text": "Chị ơi em đang đứng trước hẻm, chị xuống lấy hàng giúp em",
+      "time": "9:18"
+    },
+    {
+      "type": "text",
+      "from": "linh",
+      "text": "Chị xuống ngay, em đợi chị 2 phút nhé",
+      "time": "9:20",
+      "reaction": {
+        "emoji": "👍",
+        "count": 1
+      }
+    },
+    {
+      "type": "text",
+      "from": "shipper",
+      "text": "Dạ vâng ạ",
+      "time": "9:21"
+    }
+  ],
+  "scenario": {
+    "topic": "giao đơn hàng áo thun",
+    "decisions": [
+      "giao tại 128/7 Nguyễn Trãi, phường Bến Thành, Quận 1"
+    ],
+    "action_items": [
+      "Shipper gọi 0903 774 215 trước khi tới",
+      "Linh xuống nhận hàng tại hẻm"
+    ],
+    "summary_en": "A delivery driver contacts Linh about an order of two size-M T-shirts and asks for the address. Linh gives 128/7 Nguyễn Trãi, Bến Thành ward, District 1, and a phone number to call on arrival. Thirty minutes later the driver is at the alley and Linh comes down to collect the parcel.",
+    "summary_vi": "Shipper Hùng nhắn cho Linh để giao đơn hai áo thun size M và xin địa chỉ. Linh cung cấp địa chỉ 128/7 Nguyễn Trãi, phường Bến Thành, Quận 1 kèm số 0903 774 215 để gọi trước khi tới. Khoảng 30 phút sau shipper báo đã tới đầu hẻm và Linh xuống nhận hàng."
+  }
+}

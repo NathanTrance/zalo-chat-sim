@@ -1,0 +1,101 @@
+{
+  "id": "zalo_roommate_bills_05",
+  "clock": "20:33",
+  "status_bar": {
+    "battery": 54,
+    "signal": 4,
+    "wifi": true,
+    "muted": false,
+    "media": null
+  },
+  "ui": {
+    "nav": "3button",
+    "placeholder": "Tin nhắn",
+    "scroll_fab": false
+  },
+  "conversation": {
+    "kind": "direct",
+    "title": "Trang ở ghép",
+    "me": "linh",
+    "participants": [
+      {
+        "id": "linh",
+        "name": "Linh"
+      },
+      {
+        "id": "trang",
+        "name": "Trang"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "text",
+      "from": "trang",
+      "text": "Linh ơi, tháng này mình thanh toán tiền nhà chưa nhỉ?",
+      "time": "19:40"
+    },
+    {
+      "type": "text",
+      "from": "linh",
+      "text": "Mình chuyển tiền nhà hôm mùng 5 rồi nha",
+      "time": "19:52"
+    },
+    {
+      "type": "text",
+      "from": "trang",
+      "text": "Linh ơi, tháng này tiền điện nước tổng là 1.240.000đ nha",
+      "time": "20:11"
+    },
+    {
+      "type": "text",
+      "from": "trang",
+      "text": "Chia đôi mỗi người 620.000đ",
+      "time": "20:11"
+    },
+    {
+      "type": "image",
+      "from": "trang",
+      "asset": "assets/photos/doc_scan.jpg",
+      "caption": "Hoá đơn tháng 10 mình chụp lại nè",
+      "time": "20:12"
+    },
+    {
+      "type": "text",
+      "from": "trang",
+      "text": "Đúng rồi, nội dung ghi \"tien dien thang 10\" giúp mình",
+      "time": "20:21"
+    },
+    {
+      "type": "date",
+      "text": "20:30"
+    },
+    {
+      "type": "text",
+      "from": "linh",
+      "text": "Mình chuyển rồi nha, 620.000đ",
+      "time": "20:31",
+      "reaction": {
+        "emoji": "❤️",
+        "count": 1
+      }
+    },
+    {
+      "type": "text",
+      "from": "trang",
+      "text": "Mình nhận được rồi, cảm ơn Linh nhiều 💙",
+      "time": "20:33"
+    }
+  ],
+  "scenario": {
+    "topic": "chia tiền điện nước tháng 10",
+    "decisions": [
+      "tổng hoá đơn 1.240.000đ, mỗi người 620.000đ"
+    ],
+    "action_items": [
+      "Linh chuyển khoản 620.000đ vào tài khoản ACB 0071 0004 8899 21 với nội dung \"tien dien thang 10\""
+    ],
+    "summary_en": "Trang tells her flatmate Linh that this month's electricity and water bill is 1,240,000 VND, split evenly at 620,000 VND each, and sends a photo of the invoice. Linh confirms the ACB account number and transfers the money with the note \"tien dien thang 10\". Trang confirms receipt.",
+    "summary_vi": "Trang báo Linh hoá đơn điện nước tháng này là 1.240.000đ, chia đôi mỗi người 620.000đ và gửi ảnh hoá đơn. Linh xác nhận số tài khoản ACB, chuyển khoản 620.000đ với nội dung \"tien dien thang 10\" và Trang xác nhận đã nhận tiền."
+  }
+}

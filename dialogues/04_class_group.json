@@ -1,0 +1,115 @@
+{
+  "id": "zalo_class_group_04",
+  "clock": "21:04",
+  "status_bar": {
+    "battery": 28,
+    "signal": 4,
+    "wifi": true,
+    "muted": false,
+    "media": null
+  },
+  "ui": {
+    "nav": "gesture",
+    "placeholder": "Tin nhắn",
+    "scroll_fab": false
+  },
+  "conversation": {
+    "kind": "group",
+    "title": "Lớp CNTT K18 - Nhóm 3",
+    "me": "vy",
+    "participants": [
+      {
+        "id": "vy",
+        "name": "Vy"
+      },
+      {
+        "id": "tuan",
+        "name": "Tuấn"
+      },
+      {
+        "id": "huong",
+        "name": "Hương"
+      },
+      {
+        "id": "khanh",
+        "name": "Khánh"
+      },
+      {
+        "id": "gv",
+        "name": "Cô Lan"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "date",
+      "text": "Hôm nay"
+    },
+    {
+      "type": "text",
+      "from": "gv",
+      "text": "Chào cả nhóm, cô gửi đề cương ôn tập học kỳ nhé",
+      "time": "19:10"
+    },
+    {
+      "type": "text",
+      "from": "huong",
+      "text": "Dạ em cảm ơn cô ạ",
+      "time": "19:12"
+    },
+    {
+      "type": "text",
+      "from": "gv",
+      "text": "Các em đọc trước phần kiến trúc phần mềm nhé.",
+      "time": "19:13"
+    },
+    {
+      "type": "text",
+      "from": "gv",
+      "text": "Cả nhóm nộp báo cáo bài tập lớn trước 23h59 thứ Sáu ngày 16/10 nhé. File PDF, đặt tên theo mẫu Nhom3_BTL.pdf",
+      "time": "19:30"
+    },
+    {
+      "type": "text",
+      "from": "tuan",
+      "text": "Cô ơi, phần thiết kế cơ sở dữ liệu nhóm em làm xong rồi ạ",
+      "time": "19:34"
+    },
+    {
+      "type": "file",
+      "from": "tuan",
+      "filename": "Nhom3_ERD_v2.pdf",
+      "size": "1.8 MB",
+      "time": "19:35"
+    },
+    {
+      "type": "text",
+      "from": "huong",
+      "text": "Mình còn phần kiểm thử với viết kết luận, tối nay gửi nốt",
+      "time": "19:41"
+    },
+    {
+      "type": "text",
+      "from": "vy",
+      "text": "Để mình đọc rồi comment trong Drive nha",
+      "time": "20:05",
+      "reaction": {
+        "emoji": "❤️",
+        "count": 3
+      }
+    }
+  ],
+  "scenario": {
+    "topic": "hạn nộp báo cáo bài tập lớn môn CNTT",
+    "decisions": [
+      "nộp file PDF tên Nhom3_BTL.pdf trước 23h59 thứ Sáu 16/10",
+      "bổ sung bảng phân công và mức độ đóng góp"
+    ],
+    "action_items": [
+      "Hương hoàn thành phần kiểm thử và kết luận",
+      "Vy review mục 4.2 và comment trên Drive"
+    ],
+    "summary_en": "A class group chat is finalising a coursework report. The lecturer sets a deadline of 23:59 on Friday 16/10 for the PDF named Nhom3_BTL.pdf and later asks for a contribution table. Tuấn uploads an ERD file, Hương still has the testing and conclusions, Khánh asks for a review of section 4.2, and Vy volunteers to comment in Drive.",
+    "summary_vi": "Nhóm chat lớp trao đổi về bài tập lớn. Cô Lan đặt hạn nộp 23h59 thứ Sáu 16/10 với file PDF tên Nhom3_BTL.pdf và yêu cầu ghi rõ mức độ đóng góp. Tuấn gửi file ERD, Hương còn phần kiểm thử và kết luận, Khánh nhờ review mục 4.2 và Vy nhận đọc, comment trên Drive."
+  }
+}

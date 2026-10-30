@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Zalo chat screenshot scenario",
+  "type": "object",
+  "required": ["id", "conversation", "messages"],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "clock": { "type": "string", "description": "status-bar time, e.g. 17:38" },
+    "status_bar": {
+      "type": "object",
+      "properties": {
+        "battery": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "signal": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "wifi": { "type": "boolean" },
+        "muted": { "type": "boolean" },
+        "media": { "type": ["string", "null"], "description": "media/notification chip label" }
+      }
+    },
+    "ui": {
+      "type": "object",
+      "properties": {
+        "nav": { "enum": ["3button", "gesture"] },
+        "placeholder": { "type": "string" },
+        "scroll_fab": { "type": "boolean" }
+      }
+    },
+    "conversation": {
+      "type": "object",
+      "required": ["kind", "title", "me", "participants"],
+      "properties": {
+        "kind": { "enum": ["direct", "group"] },
+        "title": { "type": "string" },
+        "me": { "type": "string", "description": "participant id of the phone owner" },
+        "participants": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["id", "name"],
+            "properties": { "id": { "type": "string" }, "name": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "messages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": { "enum": ["text", "date", "image", "sticker", "voice", "file", "link"] },
+          "from": { "type": "string", "description": "participant id; omitted for date" },
+          "text": { "type": "string" },
+          "time": { "type": "string" },
+          "caption": { "type": "string" },
+          "asset": { "type": "string", "description": "path relative to simulation/" },
+          "emoji": { "type": "string" },
+          "duration": { "type": "integer" },
+          "filename": { "type": "string" },
+          "size": { "type": "string" },
+          "title": { "type": "string" },
+          "domain": { "type": "string" },
+          "url": { "type": "string" },
+          "reaction": {
+            "type": "object",
+            "properties": { "emoji": { "type": "string" }, "count": { "type": "integer" } }
+          },
+          "quote": {
+            "type": "object",
+            "properties": { "name": { "type": "string" }, "text": { "type": "string" } }
+          }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "type": { "const": "date" } } },
+            "then": { "required": ["text"] },
+            "else": { "required": ["from"] }
+          }
+        ]
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "properties": {
+        "topic": { "type": "string" },
+        "decisions": { "type": "array", "items": { "type": "string" } },
+        "action_items": { "type": "array", "items": { "type": "string" } },
+        "summary_en": { "type": "string" },
+        "summary_vi": { "type": "string" }
+      }
+    }
+  }
+}
