@@ -1,7 +1,26 @@
-# Zalo chat screenshot simulator
+# Chat screenshot simulator
 
 Synthetic **1440×3200 Android Zalo chat screenshots** with a machine-readable
 record of which part of the conversation was captured.
+
+The same dialogue format can also render Facebook Messenger style chat screens.
+The Messenger layout is based on the light and dark Pixel 10 captures in
+`out/pixel10`. Production output uses the same 1440×3200 resolution as Zalo:
+
+```bash
+python src/generate.py --input dialogues/01_work_ml.json --app messenger \
+  --devices screen_1440x3200 --themes light,dark --out out/messenger
+python src/check.py --manifest out/messenger/manifest.jsonl
+```
+
+`--app` defaults to `zalo`. Messenger filenames and manifest IDs start with
+`messenger_`; manifest rows retain the input dialogue ID as `source_id`, so both
+apps can share an output directory. The reference captures are used only for
+layout and color guidance; rendered conversations use the project's synthetic
+dialogue data and assets.
+The Messenger header and composer icons in `assets/messenger/` are extracted
+from the Pixel 10 emulator captures. To rebuild them from the local captures,
+run `python tools/extract_messenger_icons.py`.
 
 Built as in-domain synthetic training data for a Vietnamese phone-screen VLM
 (OCR + summarisation). The intended flow is:
@@ -210,6 +229,7 @@ Clipboard-friendly minimal example:
 | pixel_7 | 1080×2400 | 2.625 | 411×914 |
 | galaxy_a54 | 1080×2340 | 2.8125 | 384×832 |
 | budget_720 | 720×1600 | 2.0 | 360×800 |
+| pixel_10 | 1280×2856 | 3.0 | 427×952 |
 
 ## QA
 

@@ -22,6 +22,8 @@
       "properties": {
         "nav": { "enum": ["3button", "gesture"] },
         "placeholder": { "type": "string" },
+        "messenger_placeholder": { "type": "string" },
+        "subtitle": { "type": "string" },
         "scroll_fab": { "type": "boolean" }
       }
     },

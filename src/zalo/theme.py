@@ -101,6 +101,8 @@ DEVICES = {
     "pixel_7": {"w": 1080, "h": 2400, "dpr": 2.625, "nav": "gesture"},
     "galaxy_a54": {"w": 1080, "h": 2340, "dpr": 2.8125, "nav": "3button"},
     "budget_720": {"w": 720, "h": 1600, "dpr": 2.0, "nav": "3button"},
+    # Pixel 10 Messenger captures in out/pixel10: 1280x2856, ~428x952 dp.
+    "pixel_10": {"w": 1280, "h": 2856, "dpr": 3.0, "nav": "gesture"},
 }
 
 

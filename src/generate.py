@@ -71,13 +71,13 @@ def anchors(total, windows):
     return [(max(4, round(total * (k + 1) / windows)), k) for k in range(windows)]
 
 
-def expand(dialogues, themes, devices, out, windows=1):
+def expand(dialogues, themes, devices, out, windows=1, app="zalo"):
     for dlg in dialogues:
         ends = anchors(len(dlg["messages"]), windows)
         for theme in themes:
             for device in devices:
                 for end, widx in ends:
-                    yield (dlg, theme, device, out, (0, end), widx)
+                    yield (dlg, theme, device, out, (0, end), widx, app)
 
 
 # ------------------------------------------------------------------ workers ---
@@ -92,9 +92,9 @@ def _init():
 
 
 def _run(task):
-    dlg, theme, device, out, window, widx, formats = task
+    dlg, theme, device, out, window, widx, app, formats = task
     return _R.render(dlg, theme, device, out, formats=formats,
-                     window=window, window_index=widx)
+                     window=window, window_index=widx, app=app)
 
 
 def main() -> int:
@@ -105,6 +105,7 @@ def main() -> int:
     ap.add_argument("--out", default=DEFAULTS["out"])
     ap.add_argument("--themes", default=DEFAULTS["themes"])
     ap.add_argument("--devices", default=DEFAULTS["devices"])
+    ap.add_argument("--app", choices=("zalo", "messenger"), default="zalo")
     ap.add_argument("--formats", default=DEFAULTS["formats"], help="jpg, png, json")
     ap.add_argument("--workers", type=int, default=1, help="parallel browsers (1-8)")
     ap.add_argument("--windows", type=int, default=1,
@@ -135,7 +136,7 @@ def main() -> int:
         wanted = [x.strip() for x in args.only.split(",") if x.strip()]
         dialogues = (d for d in dialogues if any(w in str(d.get("id", "")) for w in wanted))
 
-    tasks = expand(dialogues, themes, devices, out, windows=max(1, args.windows))
+    tasks = expand(dialogues, themes, devices, out, windows=max(1, args.windows), app=args.app)
     if sn > 1:
         tasks = itertools.islice(
             (t for i, t in enumerate(tasks) if i % sn == si), None
