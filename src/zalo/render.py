@@ -8,6 +8,7 @@ from playwright.sync_api import sync_playwright
 
 from .labels import labels
 from .screen import build_html
+from .messenger import build_messenger_html
 from .theme import DEVICES
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -156,8 +157,16 @@ class Renderer:
         self.close()
 
     def render(self, dlg: dict, theme: str, device: str, out_dir: Path,
-               formats=("png", "jpg", "json"), window=None, window_index: int = 0) -> dict:
+               formats=("png", "jpg", "json"), window=None, window_index: int = 0,
+               app: str = "zalo") -> dict:
+        if app not in ("zalo", "messenger"):
+            raise ValueError(f"unsupported app: {app}")
+        source_id = dlg["id"]
         dlg = _resolve_assets(dlg)
+        if app == "messenger":
+            dlg["id"] = (source_id if source_id.startswith("messenger_") else
+                         "messenger_" + (source_id[5:] if source_id.startswith("zalo_")
+                                          else source_id))
         dev = DEVICES[device]
         stem = f"{dlg['id']}__{theme}__{device}__w{window_index}"
         out_dir = Path(out_dir).resolve()
@@ -166,7 +175,8 @@ class Renderer:
 
         html_path = out_dir / "html" / f"{stem}.html"
         html_path.write_text(
-            build_html(dlg, theme, device, _font_uri()), encoding="utf-8"
+            (build_messenger_html if app == "messenger" else build_html)(
+                dlg, theme, device, _font_uri()), encoding="utf-8"
         )
 
         total = len(dlg["messages"])
@@ -198,6 +208,9 @@ class Renderer:
 
         visible = {b["message_index"] for b in boxes if b["fully_visible"]}
         meta = labels(dlg, theme, device, visible)
+        meta["app"] = app
+        if app == "messenger":
+            meta["source_id"] = source_id
         meta.update(
             {
                 "image": png.name if "png" in formats else None,

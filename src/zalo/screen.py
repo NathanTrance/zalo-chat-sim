@@ -54,11 +54,12 @@ def _stamp(m: dict) -> str:
     return f'<div class="stamp">{esc(t)}</div>'
 
 
-def _reaction(m: dict) -> str:
+def _reaction(m: dict, show_count: bool = True) -> str:
     r = m.get("reaction")
     if not r:
         return ""
-    count = f'<span class="rc">{esc(r.get("count", 1))}</span>' if r.get("count") else ""
+    count = (f'<span class="rc">{esc(r.get("count", 1))}</span>'
+             if show_count and r.get("count") else "")
     emoji = r.get("emoji", "\u2764\ufe0f")
     return f'<div class="reaction"><span class="re">{esc(emoji)}</span>{count}</div>'
 
@@ -130,7 +131,7 @@ def _bubble_inner(m: dict, pal: dict) -> str:
     return f'<div class="{cls}">{inner}</div>'
 
 
-def _row(m: dict, pal: dict, conv: dict) -> str:
+def _row(m: dict, pal: dict, conv: dict, show_reaction_count: bool = True) -> str:
     t = m["type"]
     if t == "date":
         return (f'<div class="date-row" data-idx="{m.get("_idx", 0)}">'
@@ -170,7 +171,8 @@ def _row(m: dict, pal: dict, conv: dict) -> str:
 
     return (
         f'<div class="row {side}{gap}" data-idx="{idx}">{left}'
-        f'<div class="stack">{sender}{_bubble_inner(m, pal)}{_reaction(m)}</div></div>'
+        f'<div class="stack">{sender}{_bubble_inner(m, pal)}'
+        f'{_reaction(m, show_reaction_count)}</div></div>'
     )
 
 
